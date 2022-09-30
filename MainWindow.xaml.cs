@@ -23,24 +23,14 @@ namespace Tema2_CaracteresLimitados
         public MainWindow()
         {
             InitializeComponent();
+            AzulRadioButton.IsChecked = true;
         }
 
         private void TextoUsuarioTexBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextoConFormato.Text = TextoUsuarioTexBox.Text;
-        }
-        private void CheckBox_onClick(object sender, RoutedEventArgs e)
-        {
-            if (NegritaCheckBox.IsChecked == true)
-                TextoConFormato.FontWeight = FontWeights.Bold;
-            else
-                TextoConFormato.FontWeight = FontWeights.Normal;
-
-            if (CursivaCheckBox.IsChecked == true)
-                TextoConFormato.FontStyle = FontStyles.Italic;
-            else
-                TextoConFormato.FontStyle = FontStyles.Normal;
-        }
+        } 
+        
 
         private void ColoresRadioButton_onClick(object sender, RoutedEventArgs e)
         {
@@ -49,6 +39,49 @@ namespace Tema2_CaracteresLimitados
             else if (RojoRadioButton.IsChecked == true)
                 TextoConFormato.Foreground = Brushes.Red;
             else TextoConFormato.Foreground = Brushes.Green;
+        }
+         
+        //Corregir checkd y unchecked con los colores y cursiva
+        private void NegritaCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (NegritaCheckBox.IsChecked == true)
+                TextoConFormato.FontWeight = FontWeights.Bold;
+
+        }
+
+        private void NegritaCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            if(NegritaCheckBox.IsChecked == false)
+                TextoConFormato.FontWeight = FontWeights.Normal;
+        }
+
+        private void CursivaCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (CursivaCheckBox.IsChecked == true)
+                TextoConFormato.FontStyle = FontStyles.Italic;
+        }
+
+        private void CursivaCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+
+            if (CursivaCheckBox.IsChecked == false)
+                TextoConFormato.FontStyle = FontStyles.Normal;
+        }
+
+        private void AzulRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (AzulRadioButton.IsChecked == true)
+                TextoConFormato.Foreground = Brushes.Blue;
+        }
+        private void RojoRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (RojoRadioButton.IsChecked == true)
+                TextoConFormato.Foreground = Brushes.Red;
+        }
+        private void VerdeRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (VerdeRadioButton.IsChecked == true)
+                TextoConFormato.Foreground = Brushes.Green;
         }
     }
 }

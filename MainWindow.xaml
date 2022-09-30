@@ -10,14 +10,14 @@
         <TextBlock HorizontalAlignment="Left" Margin="35,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="207" FontFamily="Arial" FontWeight="Bold" FontSize="16"><Run Text="Texto"/><Run Text=":"/></TextBlock>
         <TextBox x:Name="TextoUsuarioTexBox" HorizontalAlignment="Left" Height="80" Margin="35,126,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="160" TextChanged="TextoUsuarioTexBox_TextChanged"/>
         
-        <CheckBox x:Name="NegritaCheckBox" Content="Negrita" HorizontalAlignment="Left" Margin="284,126,0,0" VerticalAlignment="Top" FontWeight="Bold" Click="CheckBox_onClick"/>
-        <CheckBox x:Name="CursivaCheckBox" Content="Cursiva" HorizontalAlignment="Left" Margin="397,126,0,0" VerticalAlignment="Top" FontStyle="Italic" Click="CheckBox_onClick"/>
+        <CheckBox x:Name="NegritaCheckBox" Content="Negrita" HorizontalAlignment="Left" Margin="284,126,0,0" VerticalAlignment="Top" FontWeight="Bold" Checked="NegritaCheckBox_Checked" Unchecked="NegritaCheckBox_Unchecked"/>
+        <CheckBox x:Name="CursivaCheckBox" Content="Cursiva" HorizontalAlignment="Left" Margin="397,126,0,0" VerticalAlignment="Top" FontStyle="Italic" Checked="CursivaCheckBox_Checked" Unchecked="CursivaCheckBox_Unchecked"/>
         
-        <RadioButton x:Name="RojoRadioButton" Content="Rojo" HorizontalAlignment="Left" Margin="647,126,0,0" VerticalAlignment="Top" GroupName="ColoresRadioButton" FontWeight="Bold" Foreground="Red" Click="ColoresRadioButton_onClick" />
-        <RadioButton x:Name="AzulRadioButton" Content="Azul" HorizontalAlignment="Left" Margin="647,106,0,0" VerticalAlignment="Top" GroupName="ColoresRadioButton" Foreground="Blue" FontWeight="Bold" Click="ColoresRadioButton_onClick" />
-        <RadioButton x:Name="VerdeRadioButton" Content="Verde" HorizontalAlignment="Left" Margin="647,146,0,0" VerticalAlignment="Top" GroupName="ColoresRadioButton" Foreground="Lime" FontWeight="Bold" Click="ColoresRadioButton_onClick" />
+        <RadioButton x:Name="RojoRadioButton" Content="Rojo" HorizontalAlignment="Left" Margin="647,126,0,0" VerticalAlignment="Top" GroupName="ColoresRadioButton" FontWeight="Bold" Foreground="Red" Checked="RojoRadioButton_Checked" />
+        <RadioButton x:Name="AzulRadioButton" Content="Azul" HorizontalAlignment="Left" Margin="647,106,0,0" VerticalAlignment="Top" GroupName="ColoresRadioButton" Foreground="Blue" FontWeight="Bold" Checked="AzulRadioButton_Checked" />
+        <RadioButton x:Name="VerdeRadioButton" Content="Verde" HorizontalAlignment="Left" Margin="647,146,0,0" VerticalAlignment="Top" GroupName="ColoresRadioButton" Foreground="Lime" FontWeight="Bold" Checked="VerdeRadioButton_Checked" />
         
         <TextBlock HorizontalAlignment="Left" Margin="530,126,0,0" TextWrapping="Wrap" Text="Color del texto:" VerticalAlignment="Top" Height="27" Width="112" FontFamily="Arial" FontSize="16"/>
-        <TextBlock x:Name="TextoConFormato" HorizontalAlignment="Left" Margin="35,273,0,0" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" VerticalAlignment="Top" Height="41" Width="661" IsManipulationEnabled="False" Foreground="Black" Background="#FFFBF9C5" FontSize="18" TextAlignment="Center"/>
+        <TextBlock x:Name="TextoConFormato" HorizontalAlignment="Left" Margin="35,273,0,0" TextTrimming="CharacterEllipsis" VerticalAlignment="Top" Height="41" Width="661" IsManipulationEnabled="False" Foreground="Black" Background="#FFFBF9C5" FontSize="18" TextAlignment="Center"/>
     </Grid>
 </Window>
